@@ -1,0 +1,5 @@
+GOOS=linux bash build
+go build .
+docker build -t gcr.io/fabric-rnd/nerd-scheduler:1.2 .
+gcloud docker -- push gcr.io/fabric-rnd/nerd-scheduler:1.2
+rm nerd-scheduler
